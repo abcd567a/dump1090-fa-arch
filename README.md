@@ -40,6 +40,9 @@ sudo systemctl restart dump1090-fa
   
 ############################################################
 
+### IMPORTANT: REBOOT COMPUTER/RPi
+### OTHERWISE DUMP1090-FA WILL FAIL TO START
+### AND A ROTATING WHEEL WILL APPEARS ON THE MAP, OR MAP WILL NOT SHOW
 
 
 
