@@ -27,7 +27,7 @@ post_install () {
   echo "============================================"
   
   echo "IMPORTANT: REBOOT COMPUTER/RPi"
-  echo "OTHERWISE DUMP!)()-FA WILL FAIL TO START"
+  echo "OTHERWISE DUMP1090-FA WILL FAIL TO START"
   echo "AND A ROTATING WHEEL WILL APPEARS ON THE MAP, OR MAP WILL NOT SHOW"
   echo ""
   echo "To make SkyView Map show range rings, do following"  
