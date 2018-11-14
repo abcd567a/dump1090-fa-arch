@@ -1,0 +1,46 @@
+post_install () {
+
+## ENABLE DUMP1090-FA SERVICE
+  systemctl enable dump1090-fa.service
+  useradd --system dump1090
+
+## DUMP1090-FA INTEGRATION TO LIGHTTPD
+  mkdir -p /etc/lighttpd/conf.d
+  cp -r ${pkgdir}/lighttpd/* /etc/lighttpd/conf.d/
+
+  chmod 777  /etc/lighttpd/lighttpd.conf
+  echo ""  >> /etc/lighttpd/lighttpd.conf
+  echo "server.modules += ( \"mod_alias\" )" >> /etc/lighttpd/lighttpd.conf
+  echo "include \"/etc/lighttpd/conf.d/*\""  >> /etc/lighttpd/lighttpd.conf
+  chmod 644  /etc/lighttpd/lighttpd.conf
+
+  systemctl enable lighttpd.service
+
+## RESTART LIGHTTPD & DUMP1090-FA
+  systemctl restart lighttpd
+  systemctl restart dump1090-fa
+
+  echo ""
+  echo ""
+  echo "============================================"
+  echo "  T H I N G - TO -  DO "
+  echo "============================================"
+  echo "IF A ROTATING WHEEL APPEARS ON THE MAP, OR MAP DOES NOT SHOW"
+  echo "REBOOT COMPUTER/RPi"
+  echo ""
+  echo "To make SkyView Map show range rings, do following"  
+  echo "(1) Open file for editing"
+  echo "sudo nano  /etc/default/dump1090-fa "
+  echo ""
+  echo "(2) Go to following line"
+  echo "RECEIVER_OPTIONS=\"--device-index 0 --gain -10 --ppm 0 --net-bo-port 30005\""
+  echo "In above line, add your latitude and longitude, so the line becomes like below:"
+  echo "RECEIVER_OPTIONS=\"--device-index 0 --gain -10 --lat xx.xxxx --lon yy.yyyy --ppm 0 --net-bo-port 30005\""
+  echo "NOTE: Repalce xx.xxxx and yy.yyyy by your actual latitude and Longitude"
+  echo ""
+  echo "(3) Restart dump1090-fa "
+  echo "sudo systemctl restart dump1090-fa "
+  echo "(4) Clear browser cache and reload browser"
+  echo ""
+  echo ""  
+}
