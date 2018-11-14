@@ -22,13 +22,25 @@ The above package can be install later also by following command:
 cd dump1090-fa-arch 
 sudo pacman -U dump1090-fa-latest-*-*.pkg.tar.xz
 ```
+### IMPORTANT: AFTER INSTALLATION, REBOOT COMPUTER / RPI.
+
+**To check status:**
+```
+sudo systemctl status dump1090-fa
+```
+
+**To restart:**
+```
+sudo systemctl restart dump1090-fa
+```
+
 ############################################################
 
   T H I N G - TO -  DO (AFTER INSTALLATION IS COMPLETED)
   
 ############################################################
 
-### REBOOT COMPUTER / RPI
+
 
 
 To make SkyView Map show range rings, do following:
