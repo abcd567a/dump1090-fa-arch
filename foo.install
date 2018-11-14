@@ -25,8 +25,9 @@ post_install () {
   echo "============================================"
   echo "  T H I N G - TO -  DO "
   echo "============================================"
-  
+  echo ""
   echo "IMPORTANT: REBOOT COMPUTER/RPi"
+  echo ""
   echo "OTHERWISE DUMP1090-FA WILL FAIL TO START"
   echo "AND A ROTATING WHEEL WILL APPEARS ON THE MAP, OR MAP WILL NOT SHOW"
   echo ""
