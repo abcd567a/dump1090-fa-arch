@@ -36,7 +36,7 @@ sudo systemctl restart dump1090-fa
 
 ############################################################
 
-##  T H I N G - TO -  DO (AFTER INSTALLATION IS COMPLETED)
+##  T H I N G S - TO -  DO (AFTER INSTALLATION IS COMPLETED)
   
 ############################################################
 
