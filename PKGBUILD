@@ -7,6 +7,7 @@ pkgrel=1
 arch=('x86_64' 'armh6' 'armh7' 'armv6h' 'armv7h')
 license=('GPL')
 
+makedepends=('git')
 depends=('rtl-sdr' 'lighttpd' 'bladerf')
 conflicts=('dump1090' 
            'dump1090-mutability' 
@@ -15,27 +16,14 @@ conflicts=('dump1090'
            'dump1090-git' 
            'dump1090_mr-git')
 
-function checkPkg {
   echo ""
-  echo "CHECKING TOOLS NEEDED TO BUILD THE PACKAGE ....."
   echo ""
-  if [[ ! `pacman -Qqe $1` ]]
-  then
-     echo ".... Installing" $1;
-
-  yes | sudo pacman -Sy $1;
-  else
-     echo $1 "is already installed .......";
-  fi
-}
-
-checkPkg git
-checkPkg make
-checkPkg pkgconf
-checkPkg binutils
-checkPkg gcc
-checkPkg fakeroot
-
+  echo -e "\e[92m TOOLS REQUIRED TO BUILD PACKAGE ARE:\e[97m"
+  echo -e "\e[93m binutils, make, gcc, pkgconf, and fakeroot \e[97m"
+  echo -e "\e[97m CHECKING TOOLS, MISSING TOOLS WILL BE OFFERED FOR INSTALLATION ....."
+  echo -e "\e[91m \"makepkg\" WILL FAIL IF  MISSING TOOLS ARE NOT INSTALLED \e[97m"
+  echo ""
+  sudo pacman -Sy --needed binutils make gcc pkgconf fakeroot
 
 source=('dump1090::git+git://github.com/flightaware/dump1090')
 md5sums=('SKIP')
