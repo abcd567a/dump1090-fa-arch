@@ -32,13 +32,17 @@ install="foo.install"
  
 build() {
   cd ${srcdir}/dump1090
-  make
+  make all faup1090 EXTRACFLAGS=-DHTMLPATH=\\\"/usr/share/dump1090/html\\\"
 }
 
 package() {
 
   mkdir -p ${pkgdir}/usr/bin
   cp  ${srcdir}/dump1090/dump1090  ${pkgdir}/usr/bin/dump1090-fa
+  cp  ${srcdir}/dump1090/view1090  ${pkgdir}/usr/bin/view1090
+
+  mkdir -p ${pkgdir}/usr/lib/piaware/helpers
+  cp -r ${srcdir}/dump1090/faup1090  ${pkgdir}/usr/lib/piaware/helpers/faup1090
 
   mkdir -p ${pkgdir}/usr/share/dump1090-fa/html
   cp -r ${srcdir}/dump1090/public_html/*  ${pkgdir}/usr/share/dump1090-fa/html/
