@@ -12,10 +12,10 @@ Give command `makepkg -si `
 Above command will run the PKGBUILD script which will: 
 
 1. Check for conflicts with existing other versions of dump1090
-2. Check Build tools needed (git, make, gcc, pkgconf, binutils, and fakeroot), and will offer to install missing tools. 
-3. Install dependencies rtl-sdr, lighttpd, and bladerf
+2. Check Build tools needed (git, make, gcc, pkgconf, binutils, and fakeroot), and will offer to install missing tools [Yes/no]. 
+3. Will offer to install dependencies rtl-sdr, lighttpd, and bladerf [Yes/no]
 4. Will build package `dump1090-fa-latest-*-*.pkg.tar.xz`
-5. Offer to install the above package[yes/no]
+5. Offer to install the above package[Yes/no]
 
 The above package can be install later also by following command:
 ```
