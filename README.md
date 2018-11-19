@@ -1,6 +1,6 @@
 #dump1090-fa-arch
 
-dump1090-fa (AUR) for Arch Linux
+dump1090-fa for Arch Linux & Arch Linux Arm
 
 Enter cloned directory. It contains following three files
 - PKGBUILD
