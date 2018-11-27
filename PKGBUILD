@@ -4,7 +4,7 @@
 pkgname=dump1090-fa
 pkgver=latest
 pkgrel=1
-arch=('x86_64' 'armh6' 'armh7' 'armv6h' 'armv7h')
+arch=('x86_64' 'armh6' 'armh7' 'armv6l' 'armv7l' 'armv6h' 'armv7h')
 license=('GPL')
 
 makedepends=('git')
@@ -19,17 +19,22 @@ conflicts=('dump1090'
   echo ""
   echo ""
   echo -e "\e[92m TOOLS REQUIRED TO BUILD PACKAGE ARE:\e[97m"
-  echo -e "\e[93m binutils, make, gcc, pkgconf, and fakeroot \e[97m"
+  echo -e "\e[93m binutils, make, fakeroot, pkgconf, and gcc\e[97m"
   echo -e "\e[97m CHECKING TOOLS, MISSING TOOLS WILL BE OFFERED FOR INSTALLATION ....."
   echo -e "\e[91m \"makepkg\" WILL FAIL IF  MISSING TOOLS ARE NOT INSTALLED \e[97m"
   echo ""
-  sudo pacman -Sy --needed binutils make gcc pkgconf fakeroot
+  sudo pacman -Sy --needed binutils make fakeroot pkgconf gcc 
 
 source=('dump1090::git+git://github.com/flightaware/dump1090')
 md5sums=('SKIP')
 
 install="foo.install"
- 
+
+pkgver() {
+  cd $srcdir/dump1090
+  printf "%s" "$(git describe --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g')"
+}
+
 build() {
   cd ${srcdir}/dump1090
   make all faup1090 EXTRACFLAGS=-DHTMLPATH=\\\"/usr/share/dump1090/html\\\"
