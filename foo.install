@@ -42,8 +42,6 @@ post_install () {
   
   echo ""
   echo  -e "\e[91m IMPORTANT: REBOOT COMPUTER/RPi \e[97m "
-  echo ""
-  echo  -e "\e[91m OTHERWISE DUMP1090-FA WILL FAIL TO START \e[97m "
-  echo  -e "\e[91m AND A ROTATING WHEEL WILL APPEARS ON THE MAP, OR MAP WILL NOT SHOW \e[97m "
-  echo ""  
+  echo  -e "\e[91m OTHERWISE DUMP1090-FA WILL FAIL TO START, AND MAP WILL NOT SHOW (ROTATING GEAR) \e[97m "
+
 }
