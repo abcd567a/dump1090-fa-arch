@@ -7,6 +7,8 @@ git clone https://github.com/abcd567a/dump1090-fa-arch.git
 
 cd dump1090-fa-arch
 
+makepkg -si
+
 ```
 
 The cloned directory contains following three files
