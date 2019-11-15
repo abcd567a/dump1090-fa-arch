@@ -1,8 +1,16 @@
-#dump1090-fa-arch
+# dump1090-fa-arch
 
-dump1090-fa for Arch Linux & Arch Linux Arm
+### dump1090-fa for Arch Linux & Arch Linux Arm
 
-Enter cloned directory. It contains following three files
+```
+git clone https://github.com/abcd567a/dump1090-fa-arch.git
+
+cd dump1090-fa-arch
+
+```
+
+The cloned directory contains following three files
+
 - PKGBUILD
 - foo.install
 - README.md
