@@ -54,7 +54,8 @@ package() {
 
   mkdir -p ${pkgdir}/usr/share/dump1090-fa/html
   cp -r ${srcdir}/dump1090/public_html/*  ${pkgdir}/usr/share/dump1090-fa/html/
-
+  cp -r ${srcdir}/dump1090/debian/start-dump1090-fa ${pkgdir}/usr/share/dump1090-fa/
+  
   mkdir -p ${pkgdir}/etc/default
   cp ${srcdir}/dump1090/debian/dump1090-fa.default  ${pkgdir}/etc/default/dump1090-fa
   
