@@ -20,7 +20,7 @@ Above command will run the PKGBUILD script which will:
 The above package can be install later also by following command:
 ```
 cd dump1090-fa-arch 
-sudo pacman -U dump1090-fa-latest-*-*.pkg.tar.xz
+sudo pacman -U dump1090-fa-*.pkg.tar.xz
 ```
 ### IMPORTANT: AFTER INSTALLATION, REBOOT COMPUTER / RPI.
 
