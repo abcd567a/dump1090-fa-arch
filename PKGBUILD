@@ -25,6 +25,9 @@ conflicts=('dump1090'
   echo ""
   sudo pacman -Sy --needed binutils make fakeroot pkgconf gcc 
 
+echo -e "\e[93m Cloning source code and starting to build \e[97m"
+echo -e "\e[93m It will take a while, please wait.... \e[97m"
+
 source=('dump1090::git+git://github.com/flightaware/dump1090')
 md5sums=('SKIP')
 
