@@ -60,9 +60,9 @@ To make SkyView Map show receiver location & range rings, do following: </br>
     `sudo nano  /etc/default/dump1090-fa`  </br>
 
 2. In the opened file, go to following line: </br>
-    RECEIVER_OPTIONS="--device-index 0 --gain -10 --ppm 0"  </br>
+    `RECEIVER_OPTIONS="--device-index 0 --gain -10 --ppm 0"`  </br>
     In above line, add your latitude and longitude, so the line becomes like below:  </br>
-    RECEIVER_OPTIONS="--device-index 0 --gain -10 --lat xx.xxxx --lon yy.yyyy --ppm 0"  </br>
+    `RECEIVER_OPTIONS="--device-index 0 --gain -10 --lat xx.xxxx --lon yy.yyyy --ppm 0"`  </br>
     NOTE: Repalce xx.xxxx and yy.yyyy by your actual latitude and Longitude  </br>
 
 3. Restart dump1090-fa </br>
