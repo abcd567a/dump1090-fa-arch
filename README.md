@@ -24,13 +24,13 @@ Above command will run the PKGBUILD script which will:
 1. Check for conflicts with existing other versions of dump1090
 2. Check Build tools needed (git, make, gcc, pkgconf, binutils, and fakeroot), and will offer to install missing tools [Yes/no]. 
 3. Offer to install dependencies rtl-sdr, lighttpd, and bladerf [Yes/no]
-4. Build package `dump1090-fa-*.pkg.tar.xz`
+4. Build package `dump1090-fa-*.pkg.tar.xz` or `dump1090-fa-*.pkg.tar.zst`
 5. Offer to install the above package [Yes/no]
 
 The above package can be install later also by following command:
 ```
 cd dump1090-fa-arch 
-sudo pacman -U dump1090-fa-*.pkg.tar.xz
+sudo pacman -U dump1090-fa-*.pkg.tar.*
 ```
 ### IMPORTANT: AFTER INSTALLATION, REBOOT COMPUTER / RPI.
 
