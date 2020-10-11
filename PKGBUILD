@@ -35,7 +35,8 @@ install="foo.install"
 
 pkgver() {
   cd $srcdir/dump1090
-  printf "%s" "$(git describe --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g')"
+  #printf "%s" "$(git describe --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g')"
+  printf "%s" "$(git describe --tags | sed 's/-.*//')"
 }
 
 build() {
