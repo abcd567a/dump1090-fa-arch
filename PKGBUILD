@@ -41,7 +41,8 @@ pkgver() {
 
 build() {
   cd ${srcdir}/dump1090
-  make all faup1090 EXTRACFLAGS=-DHTMLPATH=\\\"/usr/share/dump1090/html\\\"
+  #make all faup1090 EXTRACFLAGS=-DHTMLPATH=\\\"/usr/share/dump1090/html\\\"
+  make all faup1090
 }
 
 package() {
