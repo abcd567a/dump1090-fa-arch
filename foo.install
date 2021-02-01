@@ -5,9 +5,6 @@ post_install () {
   useradd --system dump1090
 
 ## DUMP1090-FA INTEGRATION TO LIGHTTPD
-  mkdir -p /etc/lighttpd/conf.d
-  cp -r ${pkgdir}/lighttpd/* /etc/lighttpd/conf.d/
-
   chmod 777  /etc/lighttpd/lighttpd.conf
   echo ""  >> /etc/lighttpd/lighttpd.conf
   echo "server.modules += ( \"mod_alias\" )" >> /etc/lighttpd/lighttpd.conf
