@@ -35,18 +35,15 @@ install="foo.install"
 
 pkgver() {
   cd $srcdir/dump1090
-  #printf "%s" "$(git describe --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g')"
   printf "%s" "$(git describe --tags | sed 's/-.*//')"
 }
 
 build() {
   cd ${srcdir}/dump1090
-  #make all faup1090 EXTRACFLAGS=-DHTMLPATH=\\\"/usr/share/dump1090/html\\\"
   make all faup1090
 }
 
 package() {
-
   mkdir -p ${pkgdir}/usr/bin
   cp  ${srcdir}/dump1090/dump1090  ${pkgdir}/usr/bin/dump1090-fa
   cp  ${srcdir}/dump1090/view1090  ${pkgdir}/usr/bin/view1090
@@ -64,6 +61,9 @@ package() {
   mkdir -p ${pkgdir}/usr/lib/systemd/system
   cp ${srcdir}/dump1090/debian/dump1090-fa.service  ${pkgdir}/usr/lib/systemd/system/dump1090-fa.service
 
-  cp -r ${srcdir}/dump1090/debian/lighttpd ${pkgdir}/lighttpd
+  mkdir -p ${pkgdir}/etc/lighttpd/conf.d
+  cp -r ${srcdir}/dump1090/debian/lighttpd/* ${pkgdir}/etc/lighttpd/conf.d
+  mkdir -p ${pkgdir}/usr/share/dump1090-fa/bladerf
+  cp -r ${srcdir}/dump1090/bladerf/* ${pkgdir}/usr/share/dump1090-fa/bladerf
 
 }
