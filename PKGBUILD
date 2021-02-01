@@ -40,7 +40,7 @@ pkgver() {
 
 build() {
   cd ${srcdir}/dump1090
-  make all faup1090
+  make all faup1090 DUMP1090_VERSION=$(git describe --tags | sed 's/-.*//') 
 }
 
 package() {
