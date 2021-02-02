@@ -4,7 +4,7 @@
 pkgname=dump1090-fa
 pkgver=latest
 pkgrel=1
-arch=('x86_64' 'i686' 'armh6' 'armh7' 'armv6l' 'armv7l' 'armv6h' 'armv7h')
+arch=('x86_64' 'i686' 'armh6' 'armh7' 'armv6l' 'armv7l' 'armv6h' 'armv7h' 'aarch64')
 license=('GPL')
 
 makedepends=('git')
