@@ -16,18 +16,6 @@ conflicts=('dump1090'
            'dump1090-git' 
            'dump1090_mr-git')
 
-  echo ""
-  echo ""
-  echo -e "\e[92m TOOLS REQUIRED TO BUILD PACKAGE ARE:\e[97m"
-  echo -e "\e[93m binutils, make, fakeroot, pkgconf, and gcc\e[97m"
-  echo -e "\e[97m CHECKING TOOLS, MISSING TOOLS WILL BE OFFERED FOR INSTALLATION ....."
-  echo -e "\e[91m \"makepkg\" WILL FAIL IF  MISSING TOOLS ARE NOT INSTALLED \e[97m"
-  echo ""
-  sudo pacman -Sy --needed binutils make fakeroot pkgconf gcc 
-
-echo -e "\e[93mPackage building is running in background \e[97m"
-echo -e "\e[93mIt will take a while to display progress, please wait.... \e[97m"
-
 source=('dump1090::git+git://github.com/flightaware/dump1090')
 md5sums=('SKIP')
 
