@@ -30,7 +30,7 @@ post_install () {
   echo "RECEIVER_OPTIONS=\"--device-index 0 --gain -10 --ppm 0\""
   echo ""
   echo "In above line, add your latitude and longitude, so the line becomes like below:"
-  echo  -e "RECEIVER_OPTIONS=\"--device-index 0 --gain -10 \e[92m --lat xx.xxxx --lon yy.yyyy \e[97m  --ppm 0\""
+  echo  -e "RECEIVER_OPTIONS=\"--device-index 0 --gain -10 \e[92m --lat xx.xxxx --lon yy.yyyy\e[97m --ppm 0\""
   echo "NOTE: Repalce xx.xxxx and yy.yyyy by your actual latitude and Longitude"
   echo ""
   echo "(3) Restart dump1090-fa "
