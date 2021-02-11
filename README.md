@@ -3,7 +3,7 @@
 ### dump1090-fa for Arch Linux & Arch Linux Arm
 
 ```
-sudo pacman -Syy --needed git binutils make fakeroot pkgconf gcc 
+sudo pacman -Sy --needed git binutils make fakeroot pkgconf gcc 
 
 git clone https://github.com/abcd567a/dump1090-fa-arch.git
 
