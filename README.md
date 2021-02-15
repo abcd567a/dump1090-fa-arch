@@ -33,17 +33,8 @@ The above package can be install later also by following command:
 cd dump1090-fa-arch 
 sudo pacman -U dump1090-fa-*.pkg.tar.*
 ```
-### IMPORTANT: AFTER INSTALLATION, REBOOT COMPUTER / RPI.
 
-**To check status:**
-```
-sudo systemctl status dump1090-fa
-```
 
-**To restart:**
-```
-sudo systemctl restart dump1090-fa
-```
 
 ***
 ##  T H I N G S - TO -  DO (AFTER INSTALLATION IS COMPLETED)
@@ -51,11 +42,11 @@ sudo systemctl restart dump1090-fa
 
 ### IMPORTANT: REBOOT COMPUTER/RPi
 **OTHERWISE DUMP1090-FA WILL FAIL TO START** </br>
-**AND A ROTATING WHEEL WILL APPEARS ON THE MAP, OR MAP WILL NOT SHOW** </br></br>
+**AND A NOTICE "FAILED TO FETCH DATA" WILL APPEARS ON THE MAP, OR MAP WILL NOT SHOW** </br></br>
 
 
 
-To make SkyView Map show receiver location & range rings, do following: </br>
+**To make SkyView Map show receiver location & range rings, do following:** </br>
 
 1. Open file "dump1090-fa" for editing  </br>
     `sudo nano  /etc/default/dump1090-fa`  </br>
@@ -65,9 +56,21 @@ To make SkyView Map show receiver location & range rings, do following: </br>
     In above line, add your latitude and longitude, so the line becomes like below:  </br>
     `RECEIVER_OPTIONS="--device-index 0 --gain -10 --lat xx.xxxx --lon yy.yyyy --ppm 0"`  </br>
     NOTE: Repalce xx.xxxx and yy.yyyy by your actual latitude and Longitude  </br>
+    
+
 
 3. Restart dump1090-fa </br>
 
     `sudo systemctl restart dump1090-fa `  </br>
 
 4. Clear browser cache and reload browser </br></br>
+
+
+**To check status:**
+`sudo systemctl status dump1090-fa `
+
+**To restart:**
+`sudo systemctl restart dump1090-fa `
+
+</br>
+</br>
