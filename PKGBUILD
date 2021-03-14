@@ -41,6 +41,9 @@ package() {
   
   mkdir -p ${pkgdir}/usr/share/skyaware/html
   cp -r ${srcdir}/dump1090/public_html_merged/*  ${pkgdir}/usr/share/skyaware/html
+  
+  mkdir -p ${pkgdir}/usr/lib/dump1090-fa/
+  cp -r ${srcdir}/dump1090/starch-benchmark  ${pkgdir}/usr/lib/dump1090-fa/
   cp -r ${srcdir}/dump1090/debian/generate-wisdom ${pkgdir}/usr/share/dump1090-fa/
   
   cp -r ${srcdir}/dump1090/debian/start-dump1090-fa ${pkgdir}/usr/share/dump1090-fa/
