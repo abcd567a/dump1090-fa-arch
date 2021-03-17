@@ -28,6 +28,7 @@ pkgver() {
 
 build() {
   cd ${srcdir}/dump1090
+  git reset --hard 455896e
   make DUMP1090_VERSION=$(git describe --tags | sed 's/-.*//') 
 }
 
